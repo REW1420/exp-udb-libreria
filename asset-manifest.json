@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/exp-udb-libreria/static/css/main.c332d041.css",
-    "main.js": "/exp-udb-libreria/static/js/main.9bdb70d7.js",
+    "main.js": "/exp-udb-libreria/static/js/main.9c68a36b.js",
     "index.html": "/exp-udb-libreria/index.html",
     "main.c332d041.css.map": "/exp-udb-libreria/static/css/main.c332d041.css.map",
-    "main.9bdb70d7.js.map": "/exp-udb-libreria/static/js/main.9bdb70d7.js.map"
+    "main.9c68a36b.js.map": "/exp-udb-libreria/static/js/main.9c68a36b.js.map"
   },
   "entrypoints": [
     "static/css/main.c332d041.css",
-    "static/js/main.9bdb70d7.js"
+    "static/js/main.9c68a36b.js"
   ]
 }
