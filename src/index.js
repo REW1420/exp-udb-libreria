@@ -18,7 +18,7 @@ root.render(
   
 <BrowserRouter>
 
-<Nvar></Nvar>
+
 <Routes>
 
 <Route path="/" element={<Login/>}/>
