@@ -89,13 +89,7 @@ const styles= useStyles();
     })
   }
 
-  const peticionPost=async()=>{
-    await axios.post(baseUrl, selectedBook)
-    .then(response=>{
-      setData(data.concat(response.data))
-      abrirCerrarModalInsertar()
-    })
-  }
+  
 
   const peticionPut=async()=>{
     await axios.put(baseUrl+"/"+selectedBook.id, selectedBook)

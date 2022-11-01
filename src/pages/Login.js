@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import Cookies from 'universal-cookie'
-
-import { GoogleLogin } from 'react-google-login';
-import { gapi } from 'gapi-script';
-
 import '../css/basicDesing.css'
 //api
 const baseURL = 'https://api-library-service.herokuapp.com/api/registry/'
@@ -43,6 +39,10 @@ class Login extends Component {
 
     registrarse(){
         window.location.href="./registro"
+    }
+
+    google(){
+        window.location.href="./google-login"
     }
 
 
@@ -106,10 +106,9 @@ class Login extends Component {
                     <input type="text" id="login" className="fadeIn second" name="username" placeholder="Usuario" onChange={this.handleChange} />
                     <input type="password" id="password" className="fadeIn third" name="password" placeholder="Contraseña" onChange={this.handleChange} />
                     <button className="btn btn-primary p-2 m-2" onClick={() => this.iniciarSesion()}>Iniciar Sesión</button>
-                                            
+                    <button className="btn btn-primary p-2 m-2" onClick={()=>this.google()}>Iniciar sesion con Google</button>                
                                          
-      />
-                    
+                
                  
                    
                     <div id="formFooter">

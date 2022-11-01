@@ -8,6 +8,7 @@ import ListaLibrosDeseados  from './pages/tables/ListaLibrosDeseados';
 import Autores from './pages/tables/Autores';
 import Nvar from './pages/Nvar';
 import { BusquedaLibros } from './pages/tables/BusquedaLibros';
+import Google from './pages/Google';
 
 
 
@@ -22,6 +23,7 @@ root.render(
 <Routes>
 
 <Route path="/" element={<Login/>}/>
+<Route path='/google-login' element={<Google/>}/>
 <Route path="/registro" element={<Registro/>}/>
 <Route path="/lista" element={<ListaLibros/>}/>
 <Route path="/registro-libros-deseados" element={<ListaLibrosDeseados/>}/>

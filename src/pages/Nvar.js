@@ -20,8 +20,6 @@ class Nvar extends Component {
 
     render() { 
         return (
-
-            <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
 <div className="container-fluid">
     <p className=" lead text-right fs-2 mx-2 center text-center mt-2" style={{color: "white", cursor: "pointer",}}>Hola! { cookies.get('user', {path: "/"})}</p>
@@ -55,7 +53,7 @@ class Nvar extends Component {
    </div>
 </div>
 </nav>
-</header>
+
 
         );
     }
