@@ -89,7 +89,7 @@ const styles= useStyles();
     })
   }
 
-  
+  //put
 
   const peticionPut=async()=>{
     await axios.put(baseUrl+"/"+selectedBook.id, selectedBook)
@@ -108,6 +108,7 @@ const styles= useStyles();
     })
   }
 
+  //deleta
   const peticionDelete=async()=>{
     await axios.delete(baseUrl+"/"+selectedBook.id)
     .then(response=>{

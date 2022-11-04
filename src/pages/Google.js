@@ -21,6 +21,8 @@ function Google() {
             });
         };
         gapi.load('client:auth2', initClient);
+ 
+  
     });
 
     const onSuccess = (res) => {
@@ -44,7 +46,8 @@ function Google() {
 
         window.location.href="./lista"
         
-      
+      console.log('ok')
+        
     }
   
   
@@ -88,18 +91,18 @@ function Google() {
                     <br />
                     <GoogleLogout clientId={clientId} buttonText="Cambiar cuenta" onLogoutSuccess={logOut} />
                    <br></br>
-                    <button className="btn btn-primary p-2 m-2" onClick={continuar()} >Continuar</button>                
+                   <button className="btn btn-primary p-2 m-2" onClick={continuar}>Continuar</button>              
+
 
                 </div>
             ) : (
                 <GoogleLogin
-                    clientId={clientId}
-                    buttonText="Sign in with Google"
-                    onSuccess={onSuccess}
-                    onFailure={onFailure}
-                    cookiePolicy={'single_host_origin'}
-                    
-                />
+                                        clientId={clientId}
+                                        buttonText="Sign in with Google"
+                                        onSuccess={onSuccess}
+                                        onFailure={onFailure}
+                                        cookiePolicy={'single_host_origin'} />
+
             )}     
                                         
                                         
