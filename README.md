@@ -32,10 +32,6 @@ Integrantes:
 4.  Autores: https://api-library-service.herokuapp.com/api/author
 5.  Registros: https://api-library-service.herokuapp.com/api/registry
 
-
-### ATENCION
-Aunque la pantalla de Inicio de sesion este diseñada no presenta ningun tipo de validacion, asi que se puede iniciar sesion solo con dar click, cerrar sesion es funcional
-
 ### LICENCIA
 
 Licencia Creative Commons
