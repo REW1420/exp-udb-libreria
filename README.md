@@ -1,5 +1,5 @@
 # Gestor de libros UDB
-![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
+![Badge en Desarollo](https://img.shields.io/badge/SATUS-TERMINADO-green)
 
 ATENCION
 
