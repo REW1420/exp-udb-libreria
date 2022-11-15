@@ -141,7 +141,7 @@ const styles= useStyles();
 
   const bodyInsertar=(
     <div className={styles.modal}>
-      <h3>Agregar nuevo autor</h3>
+      <h3 id='titulo'>Agregar nuevo autor</h3>
       <TextField name="name" className={styles.inputMaterial} label="Nombre" onChange={(e) => setName(e.target.value)}/>
       <br />
       <TextField name="nacionality" className={styles.inputMaterial} label="Nacionalidad" onChange={(e) => setNacionality(e.target.value)}/>
@@ -155,6 +155,12 @@ const styles= useStyles();
       <br /><br />
       <div align="right">
         <Button color="primary" onClick={()=>{
+        
+        if(name==='' && nacionality === '' && bornDay === '' && bornMoth === '' && bornYear === ''){
+          document.getElementById('titulo').innerHTML="<h3 className='text-danger'>Datos vacios</h3>"
+        }else if(name==='' || nacionality === '' || bornDay === '' || bornMoth === ''|| bornYear === ''){
+          document.getElementById('titulo').innerHTML="<h3 className='text-danger'>Rellene todos los datos</h3>"
+        }else if(parseInt(bornDay)>=0 && parseInt(bornMoth)>=0 && parseInt(bornYear)>=0 ){
           fetch(url,{
             method: 'POST',
             headers: {
@@ -162,15 +168,20 @@ const styles= useStyles();
               },
             body: JSON.stringify(
                 {
-                    id: (parseInt(lastID)+1).toString(),
-                    name: name,
-                    nacionality: nacionality,
-                    bornDay: bornDay,
-                    bornMoth: bornMoth,
-                    bornYear:bornYear 
+                  id: (parseInt(lastID)+1).toString(),
+                  name: name,
+                  nacionality: nacionality,
+                  bornDay: bornDay,
+                  bornMoth: bornMoth,
+                  bornYear:bornYear 
                 }   
             )
-        }).then((res)=>res.json()).then(abrirCerrarModalInsertar());}}>Insertar</Button>
+        }).then((res)=>res.json()).then(abrirCerrarModalInsertar());
+
+        }else {
+          document.getElementById('titulo').innerHTML="<h3 className='text-danger'>Ingrese la fecha en formato numerico</h3>"
+        }
+        }}>Insertar</Button>
         <Button onClick={()=>abrirCerrarModalInsertar()}>Cancelar</Button>
       </div>
     </div>
